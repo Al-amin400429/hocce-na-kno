@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+ul{
+    list-style:none;
+}
+
+
+.card{
+    display:flex;
+    width:100%;
+    height:auto;
+    position:relative;
+}
+
+/* .card .single-box {
+    margin:
+    flex-basis:33%
+} */
+
+.card .single-box{
+    margin:30px 6px;
+    flex-basis: 33%;
+    position:relative;
+    height:400px;
+    clip-path:circle(45%);
+    transition:0.5s all linear;
+    text-align: center;
+    overflow:hidden;
+
+}
+.card .single-box::before {
+    content:'';
+    position: absolute;
+    left:0;
+    top: 0;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.card .single-box:hover {
+    clip-path:circle(45%);
+}
+
+
+.card .single-box img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    
+}
+
+.card .single-box .content {
+    position:absolute;
+    left: 50%;
+    top: 120%;
+    transform:translate(-50%, -50%);
+    transition:0.5s all ease;
+    transition-delay: 0.5s; 
+
+}
+
+.card .single-box .content h2 {
+    color:#fff;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+.card .single-box .content ul{
+    display:flex;
+    justify-content:space-between;
+    font-weight: 700;
+    /* font-size: 20px; */
+    margin:20px 0;
+}
+
+.card .single-box .content ul li a i{
+    color:#fff;
+    font-size: 22px;
+
+}
+
+.card .single-box:hover content {
+    top: 30%;
+}
